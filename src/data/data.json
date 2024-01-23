@@ -1,0 +1,20 @@
+{
+    "options": [
+        {
+            "nombre": "Seo",
+            "descripcion": "Programacion de una web responsive completa",
+            "precio": 300
+            
+        },
+        {
+            "nombre": "Ads",
+            "descripcion": "Programacion de una web responsive completa",
+            "precio": 400
+        },
+        {
+            "nombre": "Web",
+            "descripcion": "Programacion de una web responsive completa",
+            "precio": 500
+        }
+    ]
+}
