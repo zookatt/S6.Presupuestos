@@ -4,7 +4,7 @@ import { appContext } from "../context/appContext";
 
 export default function Total() {
   const { total } = useContext(appContext); 
-
+ 
   const totalStyle = {
     width: '50%',
     margin: '0 auto',
