@@ -2,6 +2,7 @@
 import React, {useState, useContext} from "react";
 import { appContext } from "../context/appContext";
 import ExtrasWeb from "../components/ExtrasWeb";
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 export default function Options({ option }) {
@@ -12,36 +13,42 @@ export default function Options({ option }) {
 
 
     const opStyle = {
-      width: '50%',
+      width: '75%',
       margin: '0 auto',
-      border: `1px solid ${(check && option.nombre==="Web") ? '#14B76E' : '#ddd'}`,
+      border: `2px solid ${(check && option.nombre==="Web") ? '#14B76E' : '#ddd'}`,
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       borderRadius: '8px',
     };
+
+    const checkStyle ={
+      border: `1px solid ${(check) ? '#14B76E' : '#ddd'}`,
+      backgroundColor: `${(check) ?'#14B76E' : 'white'}` 
+    }
   
     return (
-      <div className="py-2 mt-2">
-        <div className="container text-center py-3" style={opStyle}>
+      <div className="py-2 mt-2 container-lg">
+        <div className="text-center py-3" style={opStyle}>
           <div className="row align-items-start">
-            <div className="col align-self-center text-start mx-3">
-              <h3>{option.nombre}</h3>
+            <div className="col align-self-center text-start mx-5">
+              <h2>{option.nombre}</h2>
               <p>{option.descripcion}</p>
             </div>
-            <div className="col align-self-center">
-              <h2>{option.precio}€</h2>
+            <div className="col  align-self-center mx-4">
+              <h3>{option.precio}€</h3>
             </div>
-            <div className="col align-self-center">
-              <input
+            
+            <div className=" form-check col text-start align-self-center">
+              <input className="form-check-input" type="checkbox"  value=""
                 onChange={() => {
                   setCheck(!check);
                   {{handleCheck((check ? -option.precio : option.precio))}}
                 }}
-                checked={check}
-                type="checkbox"
+                checked={check} 
+                style={checkStyle}
               />
-              <span className="mb-2"> Añadir</span>
-              {check && option.nombre === "Web" && <ExtrasWeb valueExtras={valueExtras} />}
+              <label className=" form-check-label text-start align-self-start" > Añadir</label> {/*mb-3  ms-2 align-self-start*/}
             </div>
+            {check && option.nombre === "Web" && <div className="my-3"><ExtrasWeb valueExtras={valueExtras} /></div>}
           </div>
         </div>
       </div>

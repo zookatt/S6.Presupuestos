@@ -1,7 +1,7 @@
 //CompoContext.jsx
 import React, { useState } from "react";
 import { appContext } from './appContext';
-import ExtrasWeb from "../components/ExtrasWeb";
+
 
 const CompoContext = ({ children }) => {
   const [total, setTotal] = useState(0); // Estado para almacenar el total

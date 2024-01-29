@@ -1,0 +1,4 @@
+.checkbox input:checked ~ .check {
+    background-color: #2489C5;
+    border:none;
+}

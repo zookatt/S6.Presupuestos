@@ -15,7 +15,7 @@ export default function Total() {
       <div className="container text-end py-3 ">
         <div className="row align-items-end">
           <div className="col align-self-center">
-            <h2 className="mb-2">Precio presupuestado: {total}€</h2>
+            <h2 className="mb-2 align-items-end">Precio presupuestado:  {total}€</h2>
           </div>
         </div>
       </div>
