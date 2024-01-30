@@ -1,4 +1,4 @@
-.checkbox input:checked ~ .check {
-    background-color: #2489C5;
-    border:none;
-}
+.form-check-input:checked {
+  background-color: #14B76E;
+  border-color: #14B76E;
+}/*# sourceMappingURL=styles.css.map */

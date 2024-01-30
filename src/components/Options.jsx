@@ -2,7 +2,7 @@
 import React, {useState, useContext} from "react";
 import { appContext } from "../context/appContext";
 import ExtrasWeb from "../components/ExtrasWeb";
-import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 export default function Options({ option }) {
@@ -20,10 +20,6 @@ export default function Options({ option }) {
       borderRadius: '8px',
     };
 
-    const checkStyle ={
-      border: `1px solid ${(check) ? '#14B76E' : '#ddd'}`,
-      backgroundColor: `${(check) ?'#14B76E' : 'white'}` 
-    }
   
     return (
       <div className="py-2 mt-2 container-lg">
@@ -44,7 +40,6 @@ export default function Options({ option }) {
                   {{handleCheck((check ? -option.precio : option.precio))}}
                 }}
                 checked={check} 
-                style={checkStyle}
               />
               <label className=" form-check-label text-start align-self-start" > Añadir</label> {/*mb-3  ms-2 align-self-start*/}
             </div>

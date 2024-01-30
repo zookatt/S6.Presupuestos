@@ -1,4 +1,4 @@
-import bannerImage from "../assets/banner.jpg";
+import bannerImage from "../assets/banneri.jpg";
 
 export default function Banner() {
   const bannerStyle = {
