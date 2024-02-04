@@ -1,13 +1,10 @@
-
-
 $theme-colors: (
-  'info': #14B76E,
+  "info": #14b76e,
 );
 
-
 .form-check-input:checked {
-    background-color: #14B76E;
-    border-color: #14B76E;
-  }
+  background-color: map-get($theme-colors, "info");
+  border-color: map-get($theme-colors, "info");
+}
 
- 
+

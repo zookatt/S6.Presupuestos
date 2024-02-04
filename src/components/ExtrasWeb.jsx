@@ -1,15 +1,13 @@
 //ExtrasWeb.jsx
 
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { appContext } from "../context/appContext";
 
 
 export default function ExtrasWeb() {
 
-    const [count1, setCount1] = useState(0);
-    const [count2, setCount2] = useState(0);
 
-    const { valueExtras } = useContext(appContext);
+    const { count1, count2, setCount1, setCount2, valueExtras } = useContext(appContext);
 
     function handleClickMinusP() {
         if (count1 > 0) {

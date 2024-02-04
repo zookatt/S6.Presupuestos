@@ -5,10 +5,10 @@ import ExtrasWeb from "../components/ExtrasWeb";
 
 
 
-export default function Options({ option }) {
+export default function Options({ option}) {
     
     const [check, setCheck] = useState(false);
-    const { handleCheck, valueExtras} = useContext(appContext);
+    const { handleCheck, valueExtras, optionsCheck } = useContext(appContext);
     
 
 
@@ -19,7 +19,8 @@ export default function Options({ option }) {
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       borderRadius: '8px',
     };
-
+    
+    
   
     return (
       <div className="py-2 mt-2 container-lg">
@@ -35,13 +36,14 @@ export default function Options({ option }) {
             
             <div className=" form-check col text-start align-self-center">
               <input className="form-check-input" type="checkbox"  value=""
-                onChange={() => {
+                 onChange={() => {
                   setCheck(!check);
-                  {{handleCheck((check ? -option.precio : option.precio))}}
+                  handleCheck((check ? -option.precio : option.precio));
+                  optionsCheck((check ? -option.nombre : option.nombre))
                 }}
                 checked={check} 
               />
-              <label className=" form-check-label text-start align-self-start" > Añadir</label> {/*mb-3  ms-2 align-self-start*/}
+              <label className=" form-check-label text-start align-self-start" > Añadir</label>
             </div>
             {check && option.nombre === "Web" && <div className="my-3"><ExtrasWeb valueExtras={valueExtras} /></div>}
           </div>
